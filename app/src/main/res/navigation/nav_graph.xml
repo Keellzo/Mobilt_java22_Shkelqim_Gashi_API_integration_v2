@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/frag1">
+
+    <!-- Fragment 1 definition -->
+    <fragment
+        android:id="@+id/frag1"
+        android:name="com.example.mobilt_java22_shkelqim_gashi_apiintegration_v3.Frag1">
+        <action
+            android:id="@+id/action_frag1_to_frag2"
+            app:destination="@id/frag2" />
+    </fragment>
+
+    <!-- Fragment 2 definition -->
+    <fragment
+        android:id="@+id/frag2"
+        android:name="com.example.mobilt_java22_shkelqim_gashi_apiintegration_v3.Frag2">
+        <action
+            android:id="@+id/action_frag2_to_frag3"
+            app:destination="@id/frag3" />
+        <action
+            android:id="@+id/action_frag2_to_frag1"
+            app:destination="@id/frag1" />
+    </fragment>
+
+    <!-- Fragment 3 definition -->
+    <fragment
+        android:id="@+id/frag3"
+        android:name="com.example.mobilt_java22_shkelqim_gashi_apiintegration_v3.Frag3">
+        <action
+            android:id="@+id/action_frag3_to_frag2"
+            app:destination="@id/frag2" />
+        <!-- Add this action to enable navigation from Frag3 to Frag1 -->
+        <action
+            android:id="@+id/action_frag3_to_frag1"
+            app:destination="@id/frag1" />
+
+    </fragment>
+
+</navigation>
